@@ -114,9 +114,7 @@ ping TARGET_IP
 
 **Screenshot**
 
-```
-images/ping.png
-```
+![...](./images/ping.png)
 
 ---
 
@@ -140,9 +138,7 @@ nmap -A -v -T4 TARGET_IP
 
 **Screenshot**
 
-```
-images/nmap.png
-```
+![...](./images/nmap.png)
 
 ---
 
@@ -158,9 +154,7 @@ Observations included:
 
 **Screenshot**
 
-```
-images/website.png
-```
+![...](./images/website.png)
 
 ---
 
@@ -170,9 +164,7 @@ The robots file revealed administrative paths.
 
 **Screenshot**
 
-```
-images/robots.png
-```
+![...](./images/robots.png)
 
 ---
 
@@ -196,9 +188,7 @@ wpscan --url http://TARGET_IP -e
 
 **Screenshot**
 
-```
-images/wpscan.png
-```
+![...](./images/wpscan.png)
 
 ---
 
@@ -212,9 +202,7 @@ For ethical reasons, recovered credentials are intentionally omitted from this r
 
 **Screenshot**
 
-```
-images/password-attack.png
-```
+![...](./images/password-attack.png)
 
 ---
 
@@ -228,47 +216,85 @@ The implementation details are intentionally omitted from this public repository
 
 **Screenshot**
 
-```
-images/metasploit-search.png
-```
+![...](./images/metasploit-search.png)
 
-```
-images/exploit-options.png
-```
+![...](./images/exploit-options.png)
+![...](./images/session.png)
 
-```
-images/session.png
-```
+--- 
+
+## Interactive Shell
+
+After establishing an initial session, an interactive Linux shell was obtained to continue local enumeration and inspect the target environment. 
+
+**Screenshot** 
+
+![...](./images/shell.png) 
 
 ---
 
 # Local Enumeration
 
-Following initial access, standard Linux enumeration techniques were used.
+System enumeration was performed to identify users, services, binaries, and potential privilege escalation vectors. 
 
-Activities included:
+Typical areas of focus included: 
 
-* User identification
-* Environment inspection
-* File system review
-* Privileged binary enumeration
-* Service analysis
+- User and group information
+- File system layout
+- SUID binaries
+- Running services
+- System configuration
+ 
+ 
+ **Screenshot**
+ 
+ 
+ ![Local Enumeration](./images/enumeration.png)
 
-Example:
+ 
+---
 
-```bash
-find / -perm -u=s -type f 2>/dev/null
-```
+## Privilege Assessment
+
+During local enumeration, an application-specific executable was identified and analyzed as part of the privilege assessment process. 
+
+The implementation details are intentionally omitted from this public repository. 
+
+**Screenshot** 
+
+![Checker Binary](./images/checker.png) 
 
 ---
 
-# Privilege Assessment
+## Privilege Escalation
 
-Privilege escalation opportunities were assessed through local enumeration.
+Overview Following the assessment of the local environment, administrative privileges were successfully obtained. 
 
-The assessment identified an application-specific privileged executable that required further analysis.
+This repository intentionally omits the technical exploitation details while documenting the overall assessment methodology. 
 
-The technical exploitation details have been omitted from this public repository.
+**Screenshot** 
+
+![Privilege Escalation](./images/privilege-escalation.png) 
+
+--- 
+
+## User Proof 
+
+The user-level objective was successfully verified. 
+
+**Screenshot** 
+
+![User Proof](./images/user-proof.png) 
+
+--- 
+
+## Administrative Proof 
+
+Administrative access to the target system was successfully verified. 
+
+**Screenshot** 
+
+![Root Proof](./images/root-proof.png) 
 
 ---
 
