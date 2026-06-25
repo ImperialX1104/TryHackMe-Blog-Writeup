@@ -218,7 +218,10 @@ The implementation details are intentionally omitted from this public repository
 
 ![...](./images/metasploit-search.png)
 
+
 ![...](./images/exploit-options.png)
+
+
 ![...](./images/session.png)
 
 --- 
